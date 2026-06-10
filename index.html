@@ -398,6 +398,76 @@ body{font-family:var(--body); color:var(--ink);
 
 .footnote{margin-top:22px;text-align:center;font-size:12px;color:var(--muted)}
 .footnote b{color:var(--ink-2)}
+
+/* ===================== HQ DISPATCH CONSOLE ===================== */
+.console-stage{width:100%;display:none;justify-content:center}
+.console{width:100%;max-width:1080px;background:var(--card);border:1px solid var(--line);border-radius:24px;box-shadow:var(--shadow);overflow:hidden}
+.dbar{display:flex;align-items:center;justify-content:space-between;padding:15px 22px;border-bottom:1px solid var(--line);gap:14px;flex-wrap:wrap}
+.dbar .dl{display:flex;align-items:center;gap:12px}
+.dbar .dword{font-family:var(--display);font-weight:700;font-size:18px;line-height:.85}
+.dbar .dword span{display:block;font-size:8.5px;letter-spacing:.3em;color:var(--muted);font-weight:600;margin-top:3px}
+.dbar .dc{display:flex;align-items:center;gap:14px}
+.dlive{display:flex;align-items:center;gap:9px;background:rgba(225,37,27,.07);border:1px solid rgba(225,37,27,.2);padding:7px 13px;border-radius:999px}
+.dlive .pulsedot{background:var(--red)}
+.dlive .n{font-family:var(--display);font-weight:700;font-size:14px}
+.dlive .t{font-size:11px;color:var(--ink-2);font-weight:500}
+.dclock{font-family:var(--display);font-weight:700;font-size:15px;font-variant-numeric:tabular-nums}
+.dop{display:flex;align-items:center;gap:10px}
+.dop .da{width:34px;height:34px;border-radius:10px;background:var(--ink);color:#fff;display:flex;align-items:center;justify-content:center;font-family:var(--display);font-weight:600;font-size:13px}
+.dop .dn{font-size:13px;font-weight:600;font-family:var(--display)}
+.dop .dr{font-size:11px;color:var(--muted)}
+.dgrid{display:grid;grid-template-columns:290px 1fr 322px;min-height:556px}
+.dcol{padding:16px;overflow-y:auto;max-height:660px}
+.dcol.dcalls{border-right:1px solid var(--line)}
+.dcol.ddetail{border-left:1px solid var(--line);background:var(--card-2)}
+.dcol-t{font-family:var(--display);font-weight:700;font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);margin-bottom:12px;display:flex;justify-content:space-between;align-items:center}
+.dcol-t .cc{background:var(--ink);color:#fff;border-radius:999px;font-size:11px;padding:1px 8px;font-weight:600}
+.dcall{background:var(--card);border:1px solid var(--line);border-left-width:4px;border-radius:14px;padding:12px;margin-bottom:10px;cursor:pointer;transition:.12s;box-shadow:var(--shadow-soft)}
+.dcall:hover{border-color:var(--muted-2)}
+.dcall.sel{border-color:var(--green);box-shadow:0 0 0 1.5px var(--green)}
+.dcall.crit{border-left-color:var(--red)}.dcall.urg{border-left-color:var(--amber)}.dcall.std{border-left-color:var(--green)}
+.dcall .dch{display:flex;align-items:center;gap:10px}
+.dcall .dav{width:40px;height:40px;border-radius:11px;display:flex;align-items:center;justify-content:center;font-family:var(--display);font-weight:600;font-size:15px;color:#fff;flex:0 0 auto}
+.dcall .dcn{font-family:var(--display);font-weight:600;font-size:14px}
+.dcall .dct{font-size:11px;color:var(--muted);margin-top:1px}
+.dcall .dsev{margin-left:auto;font-family:var(--display);font-weight:700;font-size:9px;padding:4px 8px;border-radius:999px;text-transform:uppercase;letter-spacing:.03em}
+.dsev.crit{background:rgba(225,37,27,.1);color:var(--red-ink)}.dsev.urg{background:rgba(199,119,0,.12);color:var(--amber)}.dsev.std{background:var(--green-bg);color:var(--green)}
+.dcall .dcf{display:flex;align-items:center;gap:10px;margin-top:10px;padding-top:10px;border-top:1px solid var(--line)}
+.dcall .dst{font-size:11px;font-weight:500;color:var(--ink-2);display:flex;align-items:center;gap:6px}
+.dled{width:7px;height:7px;border-radius:50%;flex:0 0 auto}
+.dled.route{background:var(--amber)}.dled.scene{background:var(--green)}.dled.wait{background:var(--red)}
+.dcall .dago{margin-left:auto;font-size:10.5px;color:var(--muted-2)}
+.dmapcol{padding:16px;display:flex;flex-direction:column;min-height:0}
+.dmapwrap{position:relative;border-radius:16px;overflow:hidden;border:1px solid var(--line);flex:1;min-height:360px;box-shadow:var(--shadow-soft)}
+.dmapwrap svg{position:absolute;inset:0;width:100%;height:100%}
+.dlegend{position:absolute;left:12px;bottom:12px;background:rgba(255,255,255,.94);backdrop-filter:blur(6px);border-radius:10px;padding:8px 11px;display:flex;gap:12px;box-shadow:var(--shadow-soft)}
+.dlegend .lg{display:flex;align-items:center;gap:6px;font-size:11px;font-weight:500;color:var(--ink-2)}
+.dlegend .lg i{width:10px;height:10px;border-radius:3px;display:inline-block}
+.dkpis{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:12px}
+.dkpi{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px 14px;box-shadow:var(--shadow-soft)}
+.dkpi .kn{font-family:var(--display);font-weight:700;font-size:20px;line-height:.9}
+.dkpi .kl{font-size:10.5px;color:var(--muted);margin-top:4px}
+.dkpi .kn.g{color:var(--green)}.dkpi .kn.r{color:var(--red)}
+.dpat-head{display:flex;gap:12px;align-items:center;margin-bottom:14px}
+.dpat-head .dpa{width:50px;height:50px;border-radius:14px;display:flex;align-items:center;justify-content:center;font-family:var(--display);font-weight:600;font-size:19px;color:#fff;flex:0 0 auto}
+.dpat-head .dpn{font-family:var(--display);font-weight:700;font-size:17px}
+.dpat-head .dpm{font-size:11.5px;color:var(--muted);margin-top:2px}
+.dface{display:flex;align-items:center;gap:11px;border-radius:14px;padding:12px;margin-bottom:14px}
+.dface.ok{background:var(--green-bg);border:1px solid rgba(18,147,110,.2)}
+.dface.pending{background:var(--amber-bg);border:1px solid rgba(199,119,0,.25)}
+.dface .dfi{width:34px;height:34px;border-radius:10px;display:flex;align-items:center;justify-content:center;flex:0 0 auto}
+.dface.ok .dfi{background:var(--green);color:#fff}.dface.pending .dfi{background:var(--amber);color:#fff}
+.dface .dft{font-family:var(--display);font-weight:600;font-size:13px}
+.dface .dfs{font-size:11px;color:var(--ink-2);margin-top:1px}
+.dunit{display:flex;align-items:center;gap:11px;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:11px 13px;margin-top:12px;box-shadow:var(--shadow-soft)}
+.dunit .dui{width:34px;height:34px;border-radius:10px;background:var(--green-bg);color:var(--green);display:flex;align-items:center;justify-content:center;flex:0 0 auto}
+.dunit .dun{font-family:var(--display);font-weight:600;font-size:13px}
+.dunit .dus{font-size:11px;color:var(--muted);margin-top:1px}
+.dact{display:flex;gap:9px;margin-top:14px}
+.dact button{flex:1;border:0;border-radius:12px;padding:12px;font-family:var(--display);font-weight:600;font-size:12.5px;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:7px}
+.dact .prim{background:var(--red);color:#fff}
+.dact .ghost{background:var(--card);border:1px solid var(--line);color:var(--ink)}
+@media(max-width:980px){.dgrid{grid-template-columns:1fr}.dcol{max-height:none}.dcol.dcalls,.dcol.ddetail{border-left:0;border-right:0;border-top:1px solid var(--line)}}
 </style>
 </head>
 <body>
@@ -410,13 +480,14 @@ body{font-family:var(--body); color:var(--ink);
     <div class="roles" id="roles">
       <button data-role="patient" class="on"><span class="rd"></span>Application patient</button>
       <button data-role="medic"><span class="rd"></span>Application ambulancier</button>
+      <button data-role="dispatch"><span class="rd"></span>Régulation (HQ)</button>
     </div>
     <h1 id="headH1"></h1>
     <p id="headP"></p>
     <div class="hint" id="headHint"></div>
   </div>
 
-  <div class="phone-stage">
+  <div class="phone-stage" id="phoneStage">
     <div class="phone"><div class="screen">
       <div class="notch"></div>
       <div class="statusbar" id="statusbar">
@@ -433,7 +504,11 @@ body{font-family:var(--body); color:var(--ink);
     </div></div>
   </div>
 
-  <div class="footnote">Prototype <b>LA VIE — Urgences Médicales</b> · application patient &amp; ambulancier · maquette, données fictives</div>
+  <div class="console-stage" id="consoleStage" style="display:none">
+    <div class="console" id="console"></div>
+  </div>
+
+  <div class="footnote">Prototype <b>LA VIE — Urgences Médicales</b> · patient · ambulancier · régulation · maquette, données fictives</div>
 </div>
 <script>
 /* ============================ DATA ============================ */
@@ -457,7 +532,10 @@ const HEAD = {
     hint:'Essayez : appuyez sur le bouton <b>SOS</b>' },
   medic:{ h1:"L'application de l'équipe d'intervention",
     p:"Côté ambulancier : tableau de bord de service, flotte, carte temps réel — puis recevez une mission, rejoignez le patient, vérifiez son identité et accédez à son dossier. Voici ce que vit le secouriste sur le terrain.",
-    hint:'Parcourez <b>Tableau de bord · Flotte · Carte</b> — une mission arrive' }
+    hint:'Parcourez <b>Tableau de bord · Flotte · Carte</b> — une mission arrive' },
+  dispatch:{ h1:"Le centre de régulation de LA VIE",
+    p:"Côté centre d'appel : le régulateur reçoit les urgences en direct, suit les ambulances sur la carte, consulte le dossier médical du patient et attribue les unités. Voici l'écran de la régulation (poste fixe).",
+    hint:"Sélectionnez un appel, puis attribuez une unité à <b>Joseph Nkulu</b>" }
 };
 const FLEET=[
   {id:'LV-204',kind:'Ambulance',you:true,status:'libre',where:'Base Gombe'},
@@ -571,8 +649,15 @@ function setRole(r){
   document.getElementById('headP').textContent=HEAD[r].p;
   document.getElementById('headHint').innerHTML='<span class="pp"></span>'+HEAD[r].hint;
   clearInterval(liveTimer); clearInterval(medicAnimTimer); clearTimeout(autoIncoming);
-  if(r==='patient'){ statusbar.classList.remove('dark'); curTab='intro'; render(); }
-  else { medicState='idle'; medicTab='board'; medicAutoUsed=false; medicHospital=null; medicVitals={pouls:null,tension:null,spo2:null}; renderMedic(); }
+  clearInterval(dispClock); if(dispAnim) cancelAnimationFrame(dispAnim);
+  if(r==='dispatch'){
+    phoneStage.style.display='none'; consoleStage.style.display='flex';
+    renderDispatch();
+  } else {
+    consoleStage.style.display='none'; phoneStage.style.display='flex';
+    if(r==='patient'){ statusbar.classList.remove('dark'); curTab='intro'; render(); }
+    else { medicState='idle'; medicTab='board'; medicAutoUsed=false; medicHospital=null; medicVitals={pouls:null,tension:null,spo2:null}; renderMedic(); }
+  }
 }
 document.querySelectorAll('#roles button').forEach(b=>b.addEventListener('click',()=>setRole(b.dataset.role)));
 
@@ -898,6 +983,94 @@ function medicDone(){
     '</div></div>'+
     '<div class="m-foot"><button class="m-btn ink" id="mRestart">Retour en service</button></div></div>';
   document.getElementById('mRestart').addEventListener('click',()=>{ medicHospital=null; medicVitals={pouls:null,tension:null,spo2:null}; medicState='idle'; medicTab='board'; renderMedic(); });
+}
+
+/* ============================ HQ DISPATCH ============================ */
+const phoneStage=document.getElementById('phoneStage');
+const consoleStage=document.getElementById('consoleStage');
+const consoleEl=document.getElementById('console');
+let dispClock=null, dispAnim=null, dispAmbA=0, dispAmbC=0.25;
+const DSEV={crit:'Critique',urg:'Urgent',std:'Standard'};
+const DCALLS=[
+ {id:'d1',name:'Patrick Lelo',init:'PL',col:'#9B6BC4',age:'61 ans',sex:'Homme',type:'Ambulance',sev:'crit',addr:'Av. du Commerce, Gombe',unit:'LV-204',status:'route',statusTxt:'Ambulance en route',eta:'3:10',ago:'4 min',blood:'AB+',allergies:['Iode'],meds:['Aspirine','Bisoprolol'],cond:['Infarctus (antécédent)'],face:'pending',mx:.30,my:.34},
+ {id:'d2',name:'Sarah Banza',init:'SB',col:'#3B82C4',age:'29 ans',sex:'Femme',type:'Moto Medivac',sev:'urg',addr:'Marché Central',unit:'M-07',status:'scene',statusTxt:'Équipe sur place',eta:'—',ago:'11 min',blood:'A-',allergies:['Aucune'],meds:['Aucun'],cond:['Grossesse 32 sem.'],face:'ok',mx:.58,my:.62},
+ {id:'d3',name:'Émile Tshanda',init:'ÉT',col:'#C99A2E',age:'45 ans',sex:'Homme',type:'Malaise',sev:'std',addr:'Limete, 7e rue',unit:'LV-231',status:'route',statusTxt:'Ambulance en route',eta:'5:40',ago:'6 min',blood:'O+',allergies:['Aucune'],meds:['Insuline'],cond:['Diabète type 1'],face:'ok',mx:.80,my:.40},
+ {id:'d4',name:'Joseph Nkulu',init:'JN',col:'#16241F',age:'53 ans',sex:'Homme',type:'Ambulance',sev:'crit',addr:'Kintambo',unit:null,status:'wait',statusTxt:'À attribuer',eta:'—',ago:"à l'instant",isNew:true,blood:'O-',allergies:['Pénicilline'],meds:['Aucun'],cond:['Traumatisme crânien'],face:'pending',mx:.44,my:.80},
+];
+let dSelected='d1';
+
+function consoleMap(){
+  const w=720,h=470,X=f=>+(f*w).toFixed(1),Y=f=>+(f*h).toFixed(1);
+  let s=cityBase(w,h,{labels:true});
+  s+=gAt(X(.12),Y(.30),hospSVG())+gAt(X(.90),Y(.66),hospSVG());
+  const aS=[X(.07),Y(.92)], aD=[X(DCALLS[0].mx),Y(DCALLS[0].my)];
+  const cS=[X(.97),Y(.90)], cD=[X(DCALLS[2].mx),Y(DCALLS[2].my)];
+  const rA='M'+aS[0]+' '+aS[1]+' C '+X(.20)+' '+Y(.78)+', '+X(.22)+' '+Y(.5)+', '+aD[0]+' '+aD[1];
+  const rC='M'+cS[0]+' '+cS[1]+' C '+X(.92)+' '+Y(.7)+', '+X(.86)+' '+Y(.52)+', '+cD[0]+' '+cD[1];
+  s+='<path id="dRouteA" d="'+rA+'" fill="none" stroke="#E1251B" stroke-width="3" stroke-dasharray="1 8" stroke-linecap="round" opacity=".5"/>';
+  s+='<path id="dRouteC" d="'+rC+'" fill="none" stroke="#C77700" stroke-width="3" stroke-dasharray="1 8" stroke-linecap="round" opacity=".5"/>';
+  DCALLS.forEach(c=>{
+    const px=X(c.mx),py=Y(c.my), col=c.sev==='crit'?'#E1251B':c.sev==='urg'?'#C77700':'#12936E';
+    if(c.id===dSelected) s+='<circle cx="'+px+'" cy="'+py+'" r="13" fill="none" stroke="'+col+'" stroke-width="2" opacity="0.6"><animate attributeName="r" values="13;30" dur="1.8s" repeatCount="indefinite"/><animate attributeName="opacity" values="0.6;0" dur="1.8s" repeatCount="indefinite"/></circle>';
+    s+=gAt(px,py,pinSVG(col));
+  });
+  s+=gAt(X(.53),Y(.62),ambSmallSVG());
+  s+=gAt(aS[0],aS[1],ambSmallSVG(),'dAmbA')+gAt(cS[0],cS[1],ambSmallSVG(),'dAmbC');
+  return s;
+}
+function dispAnimate(){
+  dispAmbA=(dispAmbA+0.0011)%1; dispAmbC=(dispAmbC+0.0014)%1;
+  moveAmb('dRouteA','dAmbA',dispAmbA); moveAmb('dRouteC','dAmbC',dispAmbC);
+  dispAnim=requestAnimationFrame(dispAnimate);
+}
+function dispTick(){
+  let base=new Date(); base.setHours(14,32,8);
+  dispClock=setInterval(()=>{ const el=document.getElementById('dClock'); if(!el){clearInterval(dispClock);return;} base=new Date(base.getTime()+1000); el.textContent=base.toTimeString().slice(0,8); },1000);
+}
+function dispCallCard(x){
+  const led=x.status==='route'?'route':x.status==='scene'?'scene':'wait';
+  return '<div class="dcall '+x.sev+(x.id===dSelected?' sel':'')+'" data-d="'+x.id+'"><div class="dch"><div class="dav" style="background:'+x.col+'">'+x.init+'</div><div><div class="dcn">'+x.name+'</div><div class="dct">'+x.type+' · '+x.addr+'</div></div><div class="dsev '+x.sev+'">'+DSEV[x.sev]+'</div></div>'+
+    '<div class="dcf"><div class="dst"><span class="dled '+led+'"></span>'+x.statusTxt+'</div><div class="dago">'+(x.ago==="à l'instant"?x.ago:'il y a '+x.ago)+'</div></div></div>';
+}
+function dispDetail(c){
+  const ok=c.face==='ok';
+  return '<div class="dcol-t">Dossier patient</div>'+
+    '<div class="dpat-head"><div class="dpa" style="background:'+c.col+'">'+c.init+'</div><div><div class="dpn">'+c.name+'</div><div class="dpm">'+c.sex+' · '+c.age+' · '+c.type+'</div></div></div>'+
+    '<div class="dface '+(ok?'ok':'pending')+'"><div class="dfi">'+(ok?'<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 13l4 4L19 7"/></svg>':'<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 8v4M12 16h.01"/></svg>')+'</div><div><div class="dft">'+(ok?'Identité vérifiée':"Vérification à l'arrivée")+'</div><div class="dfs">'+(ok?'Reconnaissance faciale validée':"À confirmer par l'équipe sur place")+'</div></div></div>'+
+    '<div class="med-grid" style="margin-top:0">'+
+      '<div class="med-cell"><div class="k">Groupe sanguin</div><div class="v blood">'+c.blood+'</div></div>'+
+      '<div class="med-cell"><div class="k">ETA</div><div class="v">'+c.eta+'</div></div>'+
+      '<div class="med-cell full"><div class="k">Allergies</div><div class="chiplist">'+c.allergies.map(a=>'<span class="dchip">'+a+'</span>').join('')+'</div></div>'+
+      '<div class="med-cell full"><div class="k">Traitements</div><div class="chiplist">'+c.meds.map(a=>'<span class="dchip n">'+a+'</span>').join('')+'</div></div>'+
+      '<div class="med-cell full"><div class="k">Antécédents</div><div class="chiplist">'+c.cond.map(a=>'<span class="dchip n">'+a+'</span>').join('')+'</div></div>'+
+    '</div>'+
+    (c.unit
+      ? '<div class="dunit"><div class="dui"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 13h11V7H3zM14 10h3l3 3v3h-6z"/><circle cx="7" cy="18" r="1.7"/><circle cx="17" cy="18" r="1.7"/></svg></div><div><div class="dun">Unité '+c.unit+'</div><div class="dus">'+c.statusTxt+'</div></div></div>'
+      : '<div class="dunit" style="border-style:dashed"><div class="dui" style="background:rgba(225,37,27,.08);color:var(--red)"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 8v8M8 12h8"/></svg></div><div><div class="dun">Aucune unité affectée</div><div class="dus">En attente d\'attribution</div></div></div>')+
+    '<div class="dact">'+(c.unit
+      ? '<button class="prim"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3-8.6A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.5c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>Contacter l\'unité</button>'
+      : '<button class="prim" id="dAssign"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5v14"/></svg>Attribuer une unité</button>')+
+      '<button class="ghost">Dossier complet</button></div>';
+}
+function renderDispatch(){
+  const c=DCALLS.find(x=>x.id===dSelected)||DCALLS[0];
+  consoleEl.innerHTML=
+   '<div class="dbar"><div class="dl"><svg width="40" height="28" viewBox="0 0 60 40"><path d="M2 24 H16 L21 24 L25 9 L31 33 L36 20 L40 24 H58" fill="none" stroke="#E1251B" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"/></svg><div class="dword">LA VIE<span>RÉGULATION</span></div></div>'+
+   '<div class="dc"><div class="dlive"><span class="pulsedot"></span><span class="n">'+DCALLS.length+'</span><span class="t">urgences actives</span></div><div class="dclock" id="dClock">14:32:08</div></div>'+
+   '<div class="dop"><div class="da">DK</div><div><div class="dn">Dr. Kalala</div><div class="dr">Régulateur · poste 2</div></div></div></div>'+
+   '<div class="dgrid">'+
+     '<div class="dcol dcalls"><div class="dcol-t">Appels en cours <span class="cc">'+DCALLS.length+'</span></div>'+DCALLS.map(dispCallCard).join('')+'</div>'+
+     '<div class="dmapcol"><div class="dmapwrap"><svg viewBox="0 0 720 470" preserveAspectRatio="xMidYMid slice" id="dMapSvg"></svg>'+
+       '<div class="dlegend"><span class="lg"><i style="background:#12936E"></i>Ambulance</span><span class="lg"><i style="background:#E1251B"></i>Patient</span><span class="lg"><i style="background:#fff;border:1px solid #E1251B"></i>Hôpital</span></div></div>'+
+       '<div class="dkpis"><div class="dkpi"><div class="kn g">6:20</div><div class="kl">Délai moyen d\'intervention</div></div><div class="dkpi"><div class="kn">5/7</div><div class="kl">Ambulances disponibles</div></div><div class="dkpi"><div class="kn r">28</div><div class="kl">Interventions aujourd\'hui</div></div></div></div>'+
+     '<div class="dcol ddetail" id="dDetail">'+dispDetail(c)+'</div>'+
+   '</div>';
+  document.getElementById('dMapSvg').innerHTML=consoleMap();
+  consoleEl.querySelectorAll('.dcall').forEach(el=>el.addEventListener('click',()=>{ dSelected=el.dataset.d; const cc=DCALLS.find(x=>x.id===dSelected); if(cc)cc.isNew=false; renderDispatch(); }));
+  const a=document.getElementById('dAssign');
+  if(a) a.addEventListener('click',()=>{ const cc=DCALLS.find(x=>x.id===dSelected); cc.unit='LV-150'; cc.status='route'; cc.statusTxt='Ambulance LV-150 en route'; cc.eta='7:30'; cc.isNew=false; renderDispatch(); });
+  clearInterval(dispClock); if(dispAnim) cancelAnimationFrame(dispAnim);
+  dispTick(); dispAnim=requestAnimationFrame(dispAnimate);
 }
 
 /* ===== init ===== */
